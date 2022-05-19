@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Tp1</tittle>
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+                <p>Nota de Matematica:</p>
+                <input type="text" name="mate" id="matematica" required onkeyup="validarNotas(document.getElementById('matematica'), 'mate')">
+            </div>
+
+            <div class="form-group">
+                <p>Nota de Lengua:</p>
+                <input type="text" name="nombre" id="lengua" required onkeyup="validarNotas(document.getElementById('lengua'), 'lengua')">
+            </div>
+
+            <div class="form-group">
+                <p>Nota de EFSI:</p>
+                <input type="text" name="nombre" id="efsi" required onkeyup="validarNotas(document.getElementById('efsi'), 'efsi')">
+            </div>
+
+        <br></br>
+        <div>
+            <button class="btn btn-primary" type="submit">Promedio</button>
+            <h2>El Resultado es:</h2>
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Mayor nota</button>
+            <h2>Resultado</h2>
+        </div>
+        </form>
+
+        <script src="codigo.js"></script>
+    </body>
+</html>
