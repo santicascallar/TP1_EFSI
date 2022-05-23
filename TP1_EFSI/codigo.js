@@ -35,17 +35,26 @@ function promedio(){
     var resul = document.getElementById("resultado").value;
     var resultado;
 
-    resultado = (parseInt(mate)+parseInt(lengua)+parseInt(efsi)) /3;
+    nota = verificarNota(mate,lengua,efsi);
 
-    resul = resultado;
-    document.getElementById("resultado").innerHTML = "El promedio es " + resultado;
-
-    if(resultado >= 6){
-        document.getElementById("resultado").style.color = "#3CC311";
+    if(nota == true){
+        alert("Ingrese todas las notas");
     }
     else{
-        document.getElementById("resultado").style.color = "red";
+        resultado = (parseInt(mate)+parseInt(lengua)+parseInt(efsi)) /3;
+
+        resul = resultado;
+        document.getElementById("resultado").innerHTML = "El promedio es " + resultado;
+
+        if(resultado >= 6){
+            document.getElementById("resultado").style.color = "#3CC311";
+        }
+        else{
+            document.getElementById("resultado").style.color = "red";
+        }
     }
+
+    
 }
 
 function mayorNota(){
@@ -86,4 +95,15 @@ function mayorNota(){
         document.getElementById("notaAlta").innerHTML = "La mayor nota es: EFSI "+ parseInt(efsi);
         document.getElementById("notaAlta").style.color = "blue";
     }
+}
+
+let verificarNota = (nota1,nota2,nota3) => {
+    let vecNotas=[nota1,nota2,nota3];
+    let validarNota=false;
+    vecNotas.forEach(nota => {
+        if(nota==null || nota=='' || nota==NaN){
+            validarNota=true
+        }
+    });
+    return validarNota;
 }

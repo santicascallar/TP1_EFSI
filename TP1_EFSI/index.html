@@ -10,13 +10,13 @@
             </legend>
             
             <p>Nota de Matematica:</p>
-            <input type="text" id="matematica" required onkeyup="validarNotas()">
+            <input type="text" id="matematica" onkeyup="validarNotas()" required>
 
             <p>Nota de Lengua:</p>
-            <input type="text" id="lengua" required onkeyup="validarNotas()">
+            <input type="text" id="lengua" onkeyup="validarNotas()" required>
 
             <p>Nota de Efsi:</p>
-            <input type="text" id="efsi" required onkeyup="validarNotas()"><br></br>
+            <input type="text" id="efsi" onkeyup="validarNotas()" required><br></br>
 
             <input type="button" id="boton" value="Promedio" onclick="promedio()">
             <p id="resultado"></p>
