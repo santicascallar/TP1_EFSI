@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <tittle>Tp1 de EFSI</tittle><br></br>
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+                Notas del año
+            </legend>
+            
+            <p>Nota de Matematica:</p>
+            <input type="text" id="matematica" required onkeyup="validarNotas()">
+
+            <p>Nota de Lengua:</p>
+            <input type="text" id="lengua" required onkeyup="validarNotas()">
+
+            <p>Nota de Efsi:</p>
+            <input type="text" id="efsi" required onkeyup="validarNotas()"><br></br>
+
+            <input type="button" id="boton" value="Promedio" onclick="promedio()">
+            <p id="resultado"></p>
+
+            <input type="button" id="boton2" value="Mayor Nota" onclick="mayorNota()">
+            <p id="notaAlta"></p>
+        </fieldset>
+
+        <script src="codigo.js"></script>
+    </body>
+</html>
